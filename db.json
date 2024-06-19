@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Alice Smith",
+    "email": "alice.smith@example.com",
+    "phone": "1234567890",
+    "github": "https://github.com/alicesmith/my_project",
+    "stopwatch": "00:05:12"
+  },
+  {
+    "name": "Carol White",
+    "email": "carol.white@example.com",
+    "phone": "1122334455",
+    "github": "https://github.com/carolwhite/my_project",
+    "stopwatch": "00:07:30"
+  },
+  {
+    "name": "NewUser1",
+    "email": "shashwat@gmail.com",
+    "phone": "1234567890",
+    "github": "https://www.github.com/goldenhawk@379",
+    "stopwatch": "00:00:07"
+  },
+  {
+    "name": "NewUser2",
+    "email": "mishra@gmail.com",
+    "phone": "1234567890",
+    "github": "https://www.github.com/goldenhawk379",
+    "stopwatch": "00:00:04"
+  }
+]
