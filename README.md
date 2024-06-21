@@ -1,23 +1,38 @@
-# Express Backend Server
+# Backend Server
 
-## Requirements
+## Description
 
-- Node.js
-- TypeScript
+Express server in TypeScript for handling submissions. Endpoints include:
+- **GET /ping**: Returns `true`
+- **POST /submit**: Save submission
+- **GET /read**: Retrieve submission by index
+- **DELETE /delete**: Delete submission
+- **GET /search**: Search by email
+- **PUT /update**: Edit submission
 
-## Installation
+## Getting Started
 
-1. Clone the repository
-2. Navigate to the project directory
-3. Install dependencies
-```
-  npm install
-```
-4. Compile TypeScript files
-```
-  npx tsc
-```
-5. Start the server
-```
-  npm start
-```
+### Prerequisites
+- Node.js and npm
+
+### Installation
+1. Clone the repository:
+    ```bash
+    git clone <backend-repository-url>
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd <repository-directory>
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Compile TypeScript:
+    ```bash
+    npx tsc
+    ```
+5. Run the server:
+    ```bash
+    node dist/index.js
+    ```
