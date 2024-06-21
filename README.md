@@ -15,7 +15,7 @@
 ```
 4. Compile TypeScript files
 ```
-  npm run build
+  npx tsc
 ```
 5. Start the server
 ```
