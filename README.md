@@ -34,5 +34,5 @@ Express server in TypeScript for handling submissions. Endpoints include:
     ```
 5. Run the server:
     ```bash
-    node dist/index.js
+    npm start
     ```
