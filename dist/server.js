@@ -62,6 +62,19 @@ app.put('/update', (req, res) => {
         res.status(200).json({ message: 'Submission updated successfully' });
     }
 });
+// Endpoint to search submission by email
+app.get('/search', (req, res) => {
+    const email = req.query.email;
+    let submissions = JSON.parse(fs_1.default.readFileSync(dbFile, 'utf8'));
+    const index = submissions.findIndex(submission => submission.email === email);
+    if (index !== -1) {
+        const result = submissions[index];
+        res.status(200).json({ index: index, submission: result });
+    }
+    else {
+        res.status(404).json({ message: 'Submission not found' });
+    }
+});
 // Endpoint to get the total count of submissions
 app.get('/count', (req, res) => {
     let submissions = JSON.parse(fs_1.default.readFileSync(dbFile, 'utf8'));

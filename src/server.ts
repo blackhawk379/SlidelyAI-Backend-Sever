@@ -7,6 +7,14 @@ const app = express();
 const port = 3000;
 const dbFile = 'db.json';
 
+interface Submission {
+    name: string;
+    email: string;
+    phone: string;
+    github: string;
+    stopwatch: string;
+}
+
 app.use(bodyParser.json());
 
 // Endpoint to check server status
@@ -66,7 +74,19 @@ app.put('/update', (req, res) => {
         res.status(200).json({ message: 'Submission updated successfully' });
     }
 });
+// Endpoint to search submission by email
+app.get('/search', (req, res) => {
+    const email = req.query.email as string;
+    let submissions: Submission[] = JSON.parse(fs.readFileSync(dbFile, 'utf8'));
+    const index = submissions.findIndex(submission => submission.email === email);
 
+    if (index !== -1) {
+        const result = submissions[index];
+        res.status(200).json({ index: index, submission: result });
+    } else {
+        res.status(404).json({ message: 'Submission not found' });
+    }
+});
 
 // Endpoint to get the total count of submissions
 app.get('/count', (req, res) => {
